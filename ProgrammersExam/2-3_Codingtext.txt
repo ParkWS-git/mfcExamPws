@@ -1,0 +1,22 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<string> order) {
+    int answer = 0;
+    
+    for (const string& item : order) {
+        if (item == "iceamericano" || item == "americanoice" || item == "anything" || item == "americano") {
+            answer += 4500;
+        } else if (item == "hotamericano" || item == "americanohot") {
+            answer += 4500;
+        } else if (item == "icecafelatte" || item == "cafelatteice" || item == "cafelatte") {
+            answer += 5000;
+        } else if (item == "hotcafelatte" || item == "cafelattehot") {
+            answer += 5000;
+        }
+    }
+    
+    return answer;
+}
